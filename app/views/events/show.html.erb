@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-	<strong>User:</strong>
-	<%= @event.user.name %>
-</p>	
-
-<p>
   <strong>Title:</strong>
   <%= @event.title %>
 </p>
@@ -16,15 +11,9 @@
 </p>
 
 <p>
-  <strong>Start time:</strong>
-  <%= @event.start_time %>
+  <strong>Time:</strong>
+  <%= @event.time %>
 </p>
 
-<p>
-  <strong>End time:</strong>
-  <%= @event.end_time %>
-</p>
-<% if current_user == @event.user %>
-  <%= link_to 'Edit', edit_event_path(@event) %> |
-<% end %>
+<%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

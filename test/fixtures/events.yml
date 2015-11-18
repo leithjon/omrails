@@ -3,11 +3,9 @@
 one:
   title: MyString
   description: MyText
-  start_time: 2015-11-01 23:56:51
-  end_time: 2015-11-01 23:56:51
+  time: 2015-11-18
 
 two:
   title: MyString
   description: MyText
-  start_time: 2015-11-01 23:56:51
-  end_time: 2015-11-01 23:56:51
+  time: 2015-11-18

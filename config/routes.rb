@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :events
+  resources :events
+  resources :events
   devise_for :admins
   devise_for :users
   get 'about' => 'pages#about'

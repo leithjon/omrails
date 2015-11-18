@@ -1,7 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, except: [:index]
-
   # GET /events
   # GET /events.json
   def index
@@ -43,7 +42,6 @@ class EventsController < ApplicationController
   # PATCH/PUT /events/1.json
   def update
     @event = current_user.events.find(params[:id])
-
     respond_to do |format|
       if @event.update(event_params)
         format.html { redirect_to @event, notice: 'Event was successfully updated.' }
@@ -60,7 +58,6 @@ class EventsController < ApplicationController
   def destroy
     @event = current_user.events.find(params[:id])
     @event.destroy
-
     respond_to do |format|
       format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
       format.json { head :no_content }
@@ -75,6 +72,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :description, :start_time, :end_time)
+      params.require(:event).permit(:title, :description, :time)
     end
 end
