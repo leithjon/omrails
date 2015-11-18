@@ -1,0 +1,16 @@
+
+<% if user_signed_in? %>
+	<h1>You're Logged In!</h1>
+<% else %>
+	<div class="well well-lg">
+		<h1>Welcome to Educated Running</h1>
+		<p>
+			You've found the home page for the
+			<%= link_to "Educated Running", "http://www.educatedrunning.com/" %>
+			application.
+		</p>
+		<p>
+			<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+		</p>
+	</div>
+<% end %>
