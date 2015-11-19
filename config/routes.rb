@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  get 'users/show'
+
+  get 'user/show'
+
   resources :events
   resources :events
   resources :events
   devise_for :admins
   devise_for :users
+  get 'users/:id' => 'users#show'
   get 'about' => 'pages#about'
   
   root 'pages#home'
